@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database" xmlns:tx="http://www.springframework.net/tx">
+
+  <!-- 用以我们在其它的应用程序中，配置数据访问 
+  <object type="Spring.Objects.Factory.Config.PropertyPlaceholderConfigurer, Spring.Core">
+    <property name="ConfigSections" value="databaseSettings"/>
+  </object>
+  -->
+
+  <!-- 数据库和Nhibernate的相关配置 -->
+  <db:provider id="DbProvider" provider="MySql-5.2.3" connectionString="Server=123.126.93.195;Database=t4;User Id=admin;Password=admin123456;charset=utf8;"/>
+  <!--
+   <db:provider id="DbProvider" provider="MySql-5.2.3" connectionString="Server=123.126.93.195;Database=t4;User Id=admin;Password=admin123456;charset=utf8;"/>
+   
+   <db:provider id="DbProvider" provider="MySql.Data.MySqlClient" connectionString="Server=123.126.93.195;Database=t4;User Id=admin;Password=admin123456;charset=utf8;"/>
+
+   <db:provider id="DbProvider" provider="MySql.Data.MySqlClient" connectionString="Server=localhost;Database=t4;User Id=admin;Password=admin;charset=utf8;"/>
+
+   <db:provider id="DbProvider" provider="MySql.Data.MySqlClient" connectionString="Server=${db.datasource};database=${db.database};uid=${db.user};pwd=${db.password};charset=utf8;"/>
+  -->
+  <object id="adoTemplate" type="Spring.Data.Core.AdoTemplate, Spring.Data">
+    <property name="DbProvider" ref="DbProvider"/>
+  </object>
+
+  <!--SessionFactory对象，其中包括一些比较重要的属性 -->
+  <object id="MySessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate32">
+    <property name="DbProvider" ref="DbProvider"/>
+    <property name="MappingAssemblies">
+      <list>
+        <value>Org.Limingnihao.Application</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+        <entry key="hibernate.connection.driver_class" value="NHibernate.Driver.MySqlDataDriver"/>
+        <entry key="dialect" value="NHibernate.Dialect.MySQLDialect"/>
+        <entry key="use_outer_join" value="true"/>
+        <entry key="hbm2ddl.keywords" value="none"/>
+        <entry key="show_sql" value="true"/>
+        <entry key="hbm2ddl.auto" value="validation"/>
+        <entry key="adonet.batch_size" value="10"/>
+        <entry key="command_timeout" value="60"/>
+        <entry key="cache.use_second_level_cache" value="true"/>
+        <entry key="cache.use_query_cache" value="false"/>
+        <entry key="query.substitutions" value="true 1, false 0, yes 'Y', no 'N"/>
+        <entry key="proxyfactory.factory_class" value="NHibernate.Bytecode.DefaultProxyFactoryFactory, NHibernate"/>
+        <entry key="hibernate.current_session_context_class" value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate32"/>
+        <!--
+        <entry key="proxyfactory.factory_class" value="NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle"/>
+        -->
+      </dictionary>
+    </property>
+    <property name="ExposeTransactionAwareSessionFactory" value="true" />
+  </object>
+
+  <object id="HibernateTemplate" type="Spring.Data.NHibernate.Generic.HibernateTemplate">
+    <property name="SessionFactory" ref="MySessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+
+  <object id="TransactionManager" type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate32">
+    <property name="DbProvider" ref="DbProvider"/>
+    <property name="SessionFactory" ref="MySessionFactory"/>
+  </object>
+
+  <!--支持事务的特性-->
+  <tx:attribute-driven transaction-manager="TransactionManager"/>
+
+  <!-- 持久化异常转换处理 -->
+  <object type="Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor, Spring.Data"/>
+
+  <import resource="log4_net.xml"/>
+  <import resource="app_dao.xml"/>
+  <import resource="app_service.xml"/>
+
+</objects>

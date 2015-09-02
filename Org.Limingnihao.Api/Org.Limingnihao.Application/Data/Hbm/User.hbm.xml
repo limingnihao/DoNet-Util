@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Org.Limingnihao.Application.Data.Domain" assembly="Org.Limingnihao.Application">
+
+  <class name="UserEntity" table="app_user_info" >
+    <id name="UserId" column="user_id" type="Int32" unsaved-value="0">
+      <generator class="identity"/>
+    </id>
+    <property name="Username" column="user_name" not-null="true"/>
+    <property name="Nickname" column="nick_name" not-null="true"/>
+    <property name="Password" column="password" not-null="true"/>
+  </class>
+  
+</hibernate-mapping>

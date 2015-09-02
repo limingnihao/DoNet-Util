@@ -1,0 +1,14 @@
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Org.Limingnihao.Api.Util.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Org.Limingnihao.Api.Util.pdb
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Aspose.Cells.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Aspose.Diagram.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Aspose.Imaging.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Aspose.Note.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Aspose.Pdf.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Aspose.Slides.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Aspose.Tasks.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Aspose.Words.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\CoreAudioApi.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\bin\Debug\Newtonsoft.Json.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\obj\x86\Debug\Org.Limingnihao.Api.Util.dll
+X:\org-liming-googlecode\svn\trunk\Org.Limingnihao.Api\Org.Limingnihao.Api.Util\obj\x86\Debug\Org.Limingnihao.Api.Util.pdb

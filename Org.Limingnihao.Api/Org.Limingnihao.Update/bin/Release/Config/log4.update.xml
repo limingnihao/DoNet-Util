@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+
+  <appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="log\update.txt"/>
+    <encoding  value="unicode"/>
+    <appendToFile value="true" />
+    <rollingStyle value="Date" />
+    <datePattern value="yyyyMMdd-HHmm" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%d [%thread] %-5level %logger [%L] - %message%newline" />
+    </layout>
+  </appender>
+  
+  <appender name="ColoredConsoleAppender" type="log4net.Appender.ColoredConsoleAppender">
+    <mapping>
+      <level value="ERROR" />
+      <foreColor value="White" />
+      <backColor value="Red, HighIntensity" />
+    </mapping>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%d [%thread] %-5level %logger [%L] - %message%newline" />
+    </layout>
+  </appender>
+
+  <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%d [%thread] %-5level %logger [%L] - %message%newline" />
+    </layout>
+  </appender>
+  
+  <root>
+    <level value="INFO" />
+    <appender-ref ref="RollingLogFileAppender" />
+    <appender-ref ref="ColoredConsoleAppender" />
+  </root>
+  
+  <logger name="Org.Limingnihao">
+    <level value="DEBUG" />
+  </logger>
+
+</log4net>

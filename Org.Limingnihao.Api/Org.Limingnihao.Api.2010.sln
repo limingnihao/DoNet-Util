@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Org.Limingnihao.Api.Util.2010", "Org.Limingnihao.Api.Util\Org.Limingnihao.Api.Util.2010.csproj", "{62636016-D192-46E8-BB92-705797285F80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Org.Limingnihao.Application.2010", "Org.Limingnihao.Application\Org.Limingnihao.Application.2010.csproj", "{8513741B-1193-4FE1-8DAB-2AA43996A711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.2010", "Test\Test.2010.csproj", "{0FE67719-E32F-4CF2-9AAB-963251179172}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62636016-D192-46E8-BB92-705797285F80}.Debug|x86.ActiveCfg = Debug|x86
+		{62636016-D192-46E8-BB92-705797285F80}.Debug|x86.Build.0 = Debug|x86
+		{62636016-D192-46E8-BB92-705797285F80}.Release|x86.ActiveCfg = Release|x86
+		{62636016-D192-46E8-BB92-705797285F80}.Release|x86.Build.0 = Release|x86
+		{8513741B-1193-4FE1-8DAB-2AA43996A711}.Debug|x86.ActiveCfg = Debug|x86
+		{8513741B-1193-4FE1-8DAB-2AA43996A711}.Debug|x86.Build.0 = Debug|x86
+		{8513741B-1193-4FE1-8DAB-2AA43996A711}.Release|x86.ActiveCfg = Release|x86
+		{8513741B-1193-4FE1-8DAB-2AA43996A711}.Release|x86.Build.0 = Release|x86
+		{0FE67719-E32F-4CF2-9AAB-963251179172}.Debug|x86.ActiveCfg = Debug|x86
+		{0FE67719-E32F-4CF2-9AAB-963251179172}.Debug|x86.Build.0 = Debug|x86
+		{0FE67719-E32F-4CF2-9AAB-963251179172}.Release|x86.ActiveCfg = Release|x86
+		{0FE67719-E32F-4CF2-9AAB-963251179172}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

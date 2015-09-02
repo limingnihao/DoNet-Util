@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+
+  <object id="UserService" type="Org.Limingnihao.Application.Service.Impl.UserServiceImpl, Org.Limingnihao.Application">
+    <property name="UserDao" ref="UserDao"/>
+  </object>
+
+  <object id="GroupService" type="Org.Limingnihao.Application.Service.Impl.GroupServiceImpl, Org.Limingnihao.Application">
+    <property name="UserDao" ref="UserDao"/>
+    <property name="GroupDao" ref="GroupDao"/>
+  </object>
+
+
+</objects>

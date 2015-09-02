@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<objects xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+
+  <object id="ApplicationDao" type="Org.Limingnihao.Application.Data.Impl.ApplicationDaoImpl, Org.Limingnihao.Application">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  
+  <object id="UserDao"        type="Org.Limingnihao.Application.Data.Impl.UserDaoImpl, Org.Limingnihao.Application">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="GroupDao"        type="Org.Limingnihao.Application.Data.Impl.GroupDaoImpl, Org.Limingnihao.Application">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="RegionDao"        type="Org.Limingnihao.Application.Data.Impl.RegionDaoImpl, Org.Limingnihao.Application">
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  
+</objects>

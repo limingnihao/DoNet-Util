@@ -1,0 +1,156 @@
+### This file is an example authorization file for svnserve.
+### Its format is identical to that of mod_authz_svn authorization
+### files.
+### As shown below each section defines authorizations for the path and
+### (optional) repository specified by the section name.
+### The authorizations follow. An authorization line can refer to:
+###  - a single user,
+###  - a group of users defined in a special [groups] section,
+###  - an alias defined in a special [aliases] section,
+###  - all authenticated users, using the '$authenticated' token,
+###  - only anonymous users, using the '$anonymous' token,
+###  - anyone, using the '*' wildcard.
+###
+### A match can be inverted by prefixing the rule with '~'. Rules can
+### grant read ('r') access, read-write ('rw') access, or no access
+### ('').
+
+[aliases]
+# joe = /C=XZ/ST=Dessert/L=Snake City/O=Snake Oil, Ltd./OU=Research Institute/CN=Joe Average
+
+[groups]
+everyone=dujing,limingzhu,yangyang,yangchunli,chenfei,zhangfan,liyongwang,gaojinglin,zhaojinhua,zengling,lishiming,lipenghui,heyang,wangeryuan,wangrui,liuchao,zhouwei,sujin,liming,lizhiming,mingwanli,wuguoxi,guojianwen
+deploy=dujing,lishiming
+testing=dujing,limingzhu,renzhifu,yangjie
+product=yangyang,yangchunli,chenfei,zhangfan,liyongwang,dujing,limingzhu,yangjie
+develop=gaojinglin,lishiming,zhaojinhua,zengling,lipenghui,zhaoxuan,heyang,wangeryuan,wangrui,liuchao,zhouwei,sujin,liming,lizhiming,mingwanli,zouwei,sujin,wangjie,yuchangbin,wuguoxi,zhangwei,guojianwen
+manager=gaojinglin,chenfei,lishiming,wangeryuan
+wuhan=zouwei,sujin,wangjie
+
+prj_ps=lishiming,lipenghui,zhaoxuan,heyang,zhaojinhua,zengling,wangrui,yangyang,chenfei,yangchunli,liuchao,zhangfan,wangeryuan,renzhifu,lizhiming,mingwanli,yuchangbin,wuguoxi,guojianwen
+prj_ucp=lishiming,lipenghui,zhaoxuan,heyang,zhaojinhua,zengling,wangrui,liuchao,sujin,wangeryuan,yangyang,chenfei,yangchunli,zhangfan,liyongwang,gaojinglin,renzhifu,lizhiming,mingwancheng,zouwei,sujin,wangjie,yuchangbin,wuguoxi,zhangwei,guojianwen,yangjie
+prj_pcd=lishiming,lipenghui,zhaoxuan,heyang,yangjie,guojianwen
+
+[/]
+lishiming=rw
+
+### e5库
+[MyApplication:/]
+lishiming=rw
+heyang=rw
+lipenghui=rw
+
+### e5库
+[MyApplication2:/]
+lishiming=rw
+
+### e5库
+[MyApplication3:/]
+lishiming=rw
+lipenghui=rw
+heyang=rw
+wangheng=rw
+lipeng=rw
+luchengzhi=rw
+donglulin=rw
+liuyangyang=rw
+liguangqing=rw
+
+### e5库
+[e5sdk:/]
+e5=rw
+
+### e5库
+[Monitor:/]
+lishiming=rw
+gaojinglin=rw
+mingwancheng=rw
+liuchao=rw
+xiaoyanwu=rw
+monitor1=rw
+monitor2=rw
+monitor3=rw
+
+### VMP
+[VMP:/]
+lishiming=rw
+wangrui=rw
+yuchangbin=rw
+mingwancheng=rw
+wangjie=rw
+liuchao=rw
+
+### 武汉多媒体
+[UnifiedMultiMediaLib:/]
+@manager=rw
+@wuhan=rw
+
+### - 二小项目
+[PrimarySecond:/]
+@manager=rw
+
+[PrimarySecond:/20_DemandManage]
+@prj_ps=rw
+@everyone=r
+
+[PrimarySecond:/30_DesignDocument]
+@prj_ps=rw
+@everyone=r
+
+[PrimarySecond:/40_Src]
+@prj_ps=rw
+@everyone=r
+
+[PrimarySecond:/50_Test]
+@prj_ps=rw
+@everyone=r
+
+[PrimarySecond:/60_Tag]
+@everyone=r
+
+[PrimarySecond:/70_Deploy]
+@testing=rw
+@everyone=r
+
+### - UCP项目
+[UnifiedCommunicationsPlatform:/]
+@manager=rw
+
+[UnifiedCommunicationsPlatform:/10_Weekly]
+@prj_ucp=rw
+@everyone=r
+
+[UnifiedCommunicationsPlatform:/20_DemandManage]
+@prj_ucp=rw
+@everyone=r
+
+[UnifiedCommunicationsPlatform:/21_ProductDocument]
+@product=rw
+@everyone=r
+
+[UnifiedCommunicationsPlatform:/30_DesignDocument]
+@prj_ucp=rw
+@everyone=r
+
+[UnifiedCommunicationsPlatform:/40_Src]
+@prj_ucp=rw
+@everyone=r
+
+
+[UnifiedCommunicationsPlatform:/50_Test]
+@prj_ucp=rw
+@everyone=r
+
+[UnifiedCommunicationsPlatform:/60_Tag]
+@prj_ucp=rw
+@everyone=r
+
+[UnifiedCommunicationsPlatform:/70_Deploy]
+@deploy=rw
+@everyone=r
+
+### - 工程指挥调度项目
+[ProjectCommandDispatch:/]
+@manager=rw
+@prj_pcd=rw
+wenchengying=rw

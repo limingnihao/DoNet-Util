@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Org.Limingnihao.Application.Data.Domain" assembly="Org.Limingnihao.Application">
+
+  <class name="GroupEntity" table="app_group_info" >
+    <id name="GroupId" column="group_id" type="Int32" unsaved-value="0">
+      <generator class="identity"/>
+    </id>
+    
+    <property name="GroupName" column="group_name" not-null="true"/>
+    
+    <property name="ParentId" column="parent_id" not-null="false"/>
+    
+    <property name="RegionId" column="region_id" not-null="false"/>
+
+    <many-to-one name="ParentEntity" column="parent_id" not-null="false" class="GroupEntity, Org.Limingnihao.Application.Data.Domain"/>
+
+    <!--
+    <many-to-one name="RegionEntity" column="region_id" not-null="false" class="RegionEntity, Org.Limingnihao.Application.Data.Domain"/>
+    -->
+    
+    <set name="Children" table="app_group_info" inverse="true" lazy="true">
+      <key column="parent_id"/>
+      <one-to-many class="GroupEntity, Org.Limingnihao.Application.Data.Domain"/>
+    </set>
+    
+  </class>
+  
+</hibernate-mapping>

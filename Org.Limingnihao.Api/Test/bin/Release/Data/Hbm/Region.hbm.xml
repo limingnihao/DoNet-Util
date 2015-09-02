@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Org.Limingnihao.Application.Data.Domain" assembly="Org.Limingnihao.Application">
+
+  <class name="RegionEntity" table="app_region_info" >
+    <id name="RegionId" column="region_id" type="Int32" unsaved-value="0">
+      <generator class="identity"/>
+    </id>
+    <property name="RegionName" column="region_name" not-null="true"/>
+  </class>
+</hibernate-mapping>

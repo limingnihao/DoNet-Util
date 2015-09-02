@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62636016-D192-46E8-BB92-705797285F80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Org.Limingnihao.Api.Util</RootNamespace>
+    <AssemblyName>Org.Limingnihao.Api.Util</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>Lib\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Diagram">
+      <HintPath>Lib\Aspose.Diagram.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Imaging">
+      <HintPath>Lib\Aspose.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Note">
+      <HintPath>Lib\Aspose.Note.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Pdf">
+      <HintPath>Lib\Aspose.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Slides">
+      <HintPath>Lib\Aspose.Slides.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Tasks">
+      <HintPath>Lib\Aspose.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>Lib\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreAudioApi">
+      <HintPath>Lib\CoreAudioApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asposes\AsposeUtil.cs" />
+    <Compile Include="Asposes\ExcelUtil.cs" />
+    <Compile Include="Asposes\OneNoteUtil.cs" />
+    <Compile Include="Asposes\PDFUtil.cs" />
+    <Compile Include="Asposes\PowerpointUtil.cs" />
+    <Compile Include="Asposes\VisioUtil.cs" />
+    <Compile Include="Asposes\WordUtil.cs" />
+    <Compile Include="Converter\BooleanToVisibilityConvert.cs" />
+    <Compile Include="Converter\ObjectToVisibilityConvertcs.cs" />
+    <Compile Include="Excep\AppCustomException.cs" />
+    <Compile Include="Excep\AppNullPointerException.cs" />
+    <Compile Include="Model\HashmapVO.cs" />
+    <Compile Include="Model\NetworkVO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schematrix\Unrar.cs" />
+    <Compile Include="Types\OSVersion.cs" />
+    <Compile Include="Util\AESUtil.cs" />
+    <Compile Include="Util\ByteUtil.cs" />
+    <Compile Include="Util\ColorUtil.cs" />
+    <Compile Include="Util\DateUtil.cs" />
+    <Compile Include="Util\EnumUtil.cs" />
+    <Compile Include="Util\FileDownUtil.cs" />
+    <Compile Include="Util\FileTypeUtil.cs" />
+    <Compile Include="Util\FileUploadUtil.cs" />
+    <Compile Include="Util\FileUtil.cs" />
+    <Compile Include="Util\GetCursorPosUtil.cs" />
+    <Compile Include="Util\HttpUtil.cs" />
+    <Compile Include="Util\ImageUtil.cs" />
+    <Compile Include="Util\IniFileUtil.cs" />
+    <Compile Include="Util\JsonUtil.cs" />
+    <Compile Include="Util\LogUtil.cs" />
+    <Compile Include="Util\MD5Util.cs" />
+    <Compile Include="Util\NetworkUtil.cs" />
+    <Compile Include="Util\NewtonsoftJson.cs" />
+    <Compile Include="Util\NumberUtil.cs" />
+    <Compile Include="Util\OSUtil.cs" />
+    <Compile Include="Util\PageUtil.cs" />
+    <Compile Include="Util\ProcessUtil.cs" />
+    <Compile Include="Util\RelayCommandUtil.cs" />
+    <Compile Include="Util\StringUtil.cs" />
+    <Compile Include="Util\VolumeUtil.cs" />
+    <Compile Include="Util\WindowUtil.cs" />
+    <Compile Include="Util\XmlUtil.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

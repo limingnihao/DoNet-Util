@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Org.Limingnihao.Import/Org.Limingnihao.Import.2015.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Org.Limingnihao.Api.Util/Asposes/PDFUtil.cs">
+    <Files>
+      <File FileName="Org.Limingnihao.Api.Util/Util/AESUtil.cs" Line="1" Column="1" />
+      <File FileName="Org.Limingnihao.Api.Util/Util/JsonUtil.cs" Line="1" Column="1" />
+      <File FileName="Org.Limingnihao.Api.Util/Program.cs" Line="16" Column="4" />
+      <File FileName="Org.Limingnihao.Api.Util/Asposes/PDFUtil.cs" Line="36" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

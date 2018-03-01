@@ -1,0 +1,63 @@
+﻿<Window x:Class="Com.Shell.Import.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Width="800" Height="500" Closed="Window_Closed" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="5,10,0,0" Orientation="Horizontal">
+            <Label Content="数据库：" />
+            <Label Content="未连接" Foreground="Green" x:Name="label_mysql" />
+        </StackPanel>
+        <Border Grid.Row="1" Background="AntiqueWhite" Margin="5,5,5,5" BorderBrush="Blue" BorderThickness="1" >
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Content="IP地址："/>
+                <TextBox x:Name="text_address" Width="80" Text="11.1.1.11" VerticalContentAlignment="Center" />
+                <Label Content="端口号："/>
+                <TextBox x:Name="text_port" Width="80" Text="3306" VerticalContentAlignment="Center" />
+                <Label Content="数据库："/>
+                <TextBox x:Name="text_database" Width="80" Text="test" VerticalContentAlignment="Center" />
+                <Label Content="用户名："/>
+                <TextBox x:Name="text_username" Width="80" Text="admin" VerticalContentAlignment="Center" />
+                <Label Content="密码："/>
+                <TextBox x:Name="text_password" Width="80" Text="admin" VerticalContentAlignment="Center" />
+                <Button Width="60" Content="连接" Margin="15,0,0,0" Click="connectMysql_clickHandler" />
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="2" Margin="5,5,0,0" BorderBrush="Blue" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Button   Margin="05,0,0,0" Width="60" Height="28" Content="打开文件"     Click="openExcel_clickHandler"/>
+                <Button   Margin="15,0,0,0" Width="60" Height="28" Content="读取文件"     Click="readExcel_clickHandler" />
+                <CheckBox Margin="15,0,0,0" Name="check_isdelete" Content="删除已有数据" VerticalAlignment="Center" />
+                <Button   Margin="15,0,0,0" Width="80" Height="28" Content="保存到数据库" Click="saveData_clickHandler" />
+                <Label    Margin="15,0,0,0" Content="未打开文件" Foreground="Green" VerticalContentAlignment="Center" x:Name="label_filePath" />
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="3" Margin="5,5,0,0" BorderBrush="Blue" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="1.1Excel表结构" Click="button_1_1_clickHandler"/>
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="1.2前稽核" Click="checkGoods_clickHandler"/>
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="2.1正式表结构" Click="checkGoods_clickHandler"/>
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="2.2基础数据" Click="checkGoods_clickHandler"/>
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="3.1导入前准备" Click="checkGoods_clickHandler"/>
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="3.2客户商品" Click="checkGoods_clickHandler"/>
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="3.3卡转换" Click="checkGoods_clickHandler"/>
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="3.3卡转换" Click="checkGoods_clickHandler"/>
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="3.3卡转换" Click="checkGoods_clickHandler"/>
+                <Button Margin="5,0,0,0" Width="80" Height="28" Content="3.3卡转换" Click="checkGoods_clickHandler"/>
+
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="4" Margin="5,5,0,0" BorderBrush="Blue" BorderThickness="1">
+            <ScrollViewer x:Name="scroll_log">
+                <ListBox x:Name="listBox_log"></ListBox>
+            </ScrollViewer>
+        </Border>
+
+    </Grid>
+</Window>

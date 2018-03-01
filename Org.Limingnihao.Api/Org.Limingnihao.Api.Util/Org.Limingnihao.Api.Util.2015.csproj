@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{61E00727-413B-4699-859F-E5FAFB2AC254}</ProjectGuid>
+    <ProjectGuid>{B27829E7-6006-4324-9975-CE1B98799259}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Org.Limingnihao.Api.Util</RootNamespace>
     <AssemblyName>Org.Limingnihao.Api.Util</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,42 +28,53 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Cells">
+    <Reference Include="Aspose.Cells, Version=8.0.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Aspose.Cells.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Diagram">
+    <Reference Include="Aspose.Diagram, Version=3.8.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Aspose.Diagram.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Imaging">
+    <Reference Include="Aspose.Imaging, Version=2.3.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Aspose.Imaging.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Note">
+    <Reference Include="Aspose.Note, Version=1.1.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Aspose.Note.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Pdf">
+    <Reference Include="Aspose.Pdf, Version=9.1.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Aspose.Pdf.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Slides">
+    <Reference Include="Aspose.Slides, Version=14.2.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Aspose.Slides.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Tasks">
+    <Reference Include="Aspose.Tasks, Version=6.5.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Aspose.Tasks.dll</HintPath>
     </Reference>
-    <Reference Include="Aspose.Words">
+    <Reference Include="Aspose.Words, Version=14.2.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Aspose.Words.dll</HintPath>
     </Reference>
-    <Reference Include="Common.Logging">
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="CoreAudioApi">
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\Lib\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreAudioApi, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\CoreAudioApi.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System.configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -83,12 +92,6 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Asposes\AsposeUtil.cs" />
@@ -135,7 +138,6 @@
     <Compile Include="Util\LogUtil.cs" />
     <Compile Include="Util\MD5Util.cs" />
     <Compile Include="Util\NetworkUtil.cs" />
-    <Compile Include="Util\NewtonsoftJson.cs" />
     <Compile Include="Util\NumberUtil.cs" />
     <Compile Include="Util\OSUtil.cs" />
     <Compile Include="Util\PageUtil.cs" />
